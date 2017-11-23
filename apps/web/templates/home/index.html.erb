@@ -1,0 +1,28 @@
+<h1>Blog</h1>
+
+<% if posts.any? %>
+  <div class="posts">
+    <% posts.each do |post| %>
+      <div class="post">
+        <h2><%= post.title %></h2>
+        <p class="author">Published by <%= post.author %> on <%= post.created_at.strftime("%m/%d/%Y") %></p>
+        <p class="body"><%= post.body %></p>
+
+        <% if post.comments.any? %>
+          <div class="comments">
+            <h4>Comments:</h4>
+
+            <% post.comments.each do |comment| %>
+              <div class="comment">
+                <p class="author">- <%= comment.author %> says:</p>
+                <p class="body">"<%= comment.body %>"</p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="placeholder">There are no posts yet.</p>
+<% end %>

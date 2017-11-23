@@ -1,0 +1,58 @@
+body {
+  font-family: 'Helvetica Neue';
+}
+
+body, .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts {
+  width: 1024px;
+}
+
+.post {
+  background-color: #eee;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+
+  h2 {
+    font-size: 1.4em;
+    text-align: left;
+  }
+
+  .author {
+    text-align: right;
+  }
+
+  .body {
+    text-align: justify;
+  }
+
+  .comments {
+    background-color: #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 1px;
+
+    h4 {
+      text-align: left;
+    }
+
+    .comment {
+      border-bottom: 1px dashed #eee;
+
+      .author {
+        font-weight: bold;
+      }
+
+      .body {
+        font-style: italic;
+      }
+    }
+  }
+}
