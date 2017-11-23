@@ -8,7 +8,7 @@
         <p class="author">Published by <%= post.author %> on <%= post.created_at.strftime("%m/%d/%Y") %></p>
         <p class="body"><%= post.body %></p>
 
-        <% if post.comments.any? %>
+        <% unless post.comments.nil? %>
           <div class="comments">
             <h4>Comments:</h4>
 
