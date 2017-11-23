@@ -7,6 +7,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="memory">
+        <p>
+          Memory Used: <strong><%= `ps -o rss= -p #{Process.pid}`.to_i / 1024 %> MBs</strong>
+        </p>
+      </div>
+
       <%= yield %>
     </div>
   </body>
